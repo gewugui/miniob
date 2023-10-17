@@ -54,6 +54,14 @@ public:
             int attribute_count, 
             const AttrInfoSqlNode attributes[]);
 
+/**
+  * 销毁表格，删除表格的元数据文件、数据文件、索引文件等资源。
+  * 
+  * @param dir 表格所在的目录路径
+  * @return 返回成功或失败的状态码，RC::SUCCESS 表示成功，其他状态码表示失败。
+  */
+  RC destroy(const char* dir);
+  
   /**
    * 打开一个表
    * @param meta_file 保存表元数据的文件完整路径
